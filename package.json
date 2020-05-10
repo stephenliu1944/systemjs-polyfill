@@ -1,6 +1,6 @@
 {
   "name": "systemjs-polyfill",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "wrap systemjs and some extension library.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
