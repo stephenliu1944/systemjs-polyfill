@@ -5,7 +5,6 @@ import { uglify } from 'rollup-plugin-uglify';
 import babel from 'rollup-plugin-babel';
 import { eslint } from 'rollup-plugin-eslint';
 import del from 'rollup-plugin-delete';
-import url from 'rollup-plugin-url';
 import merge from 'lodash/merge';
 import pkg from './package.json';
 
@@ -49,11 +48,7 @@ function base(file) {
             }),
             resolve(),
             commonjs(),                   
-            json(),
-            // 导入的文件
-            url({
-                limit: 999999 * 1024                      // only use inline files, don't use copy files.
-            })
+            json()
         ]
     };
 }
